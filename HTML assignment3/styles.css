@@ -1,0 +1,111 @@
+/*
+1. Universal selector (*)
+2. Type selectors (e.g., body, header, main, img, figcaption, ul, li, p, footer)
+3. Descendant selectors (e.g., ul li::before)
+4. Attribute selectors (none used in this case, but can be used for specific elements with attributes)
+5. Child selectors (e.g., main img)
+6. Pseudo-element selector (e.g., ::before for list items)
+7. Pseudo-class selectors (none used in this case, but can be used for interactive states)
+8. Descendant combinator (e.g., header img)
+*/
+
+
+/* Reset all margins and paddings to 0 */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* body */
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(45deg, hsl(0, 70%, 50%), hsl(240, 60%, 20%));
+    padding: 1em;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+  
+  /* Main Content */
+  main {
+    padding: 2em;
+    background: linear-gradient(45deg, hsl(0, 70%, 50%), hsl(240, 60%, 20%));
+    color: white;
+    position: relative;
+  }
+  
+  /* First and second images centered */
+  main img:nth-of-type(1),
+  main img:nth-of-type(2) {
+    width: 100%;
+    max-width: 300px; /* Adjust the width as needed */
+    margin: 1em auto;
+    display: block;
+  }
+  
+  /* Image captions */
+  figcaption {
+    text-align: center;
+    font-style: italic;
+  }
+  
+  /* Images on the right */
+  main img:nth-of-type(3),
+  main img:nth-of-type(4),
+  main img:nth-of-type(5) {
+    width: 100%;
+    max-width: 100px; /* Adjust the width as needed */
+    margin: 1em auto;
+    display: block;
+    float: right; /* Float the images to the right */
+  }
+  
+  /* Caption under the third image */
+  main img:nth-of-type(5) ~ figcaption {
+    text-align: center;
+  }
+  
+  /* Left Content */
+  .left-content {
+    float: left;
+    width: calc(100% - 350px); /* Adjust the width based on the total width of the images on the right */
+  }
+  
+  /* Paragraphs */
+  .left-content p {
+    margin: 1em 0;
+  }
+  
+  /* Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 94%, 1);
+    padding: 1em;
+    text-align: center;
+    color: hsl(0, 0%, 20%);
+  }
