@@ -1,0 +1,89 @@
+/* CSS resets */
+/* This section resets the margin, padding, and border for various HTML elements, providing a clean slate for styling.*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /*Sets the font family for the entire document. */
+    color: #fff; /*Sets the text color to white. */
+    padding: 20px; /*Adds padding to the body.*/
+    background-image: url("madText.jpg"); /*Sets a background image (madText.jpg) and overlays it with radial gradients to create a textured effect. */
+    background-color:black;
+    background-image:
+    radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+    radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+}
+
+header {
+    text-align: center; /*Centers the text in the header.*/
+    background: #333; /* Gives the header a dark background color (#333)*/
+    padding: 10px; /* Adds a padding to the header */
+}
+
+h1 {
+    font-size: 2em; /*Increases the font size of h1 to 2em. */
+}
+
+section {
+    margin-bottom: 20px; /*Adds a bottom margin to each section for spacing. */
+}
+
+ul {
+    list-style: none; /*Removes default list styles*/
+}
+
+img {
+    max-width: 100%; /*Ensures images are responsive by setting max-width to 100%. */
+    height: auto;
+    margin-bottom: 10px; /*Adds bottom margin to images for spacing. */
+}
+
+footer {
+    text-align: center; /* Centers the text in the footer. */
+    margin-top: 20px; /*Adds top margin to the footer for spacing. */
+}
+
+figcaption {
+    text-align: left; /*Aligns figcaption text to the left.*/
+    font-style: italic; /*Applies italic style to figcaption text. */
+    color: #888; /* Sets color to a light gray (#888).*/
+}
+
+h2 {
+    color: #FFD700; /* Gold color for h2 */
+}
+
+ul li {
+    margin-left: 20px; /* Add indentation for list items */
+}
+
+footer a {
+    color: #00F; /* Blue color for footer links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
