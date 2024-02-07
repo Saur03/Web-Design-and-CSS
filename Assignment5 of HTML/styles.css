@@ -1,0 +1,70 @@
+/*  to define a font for use */
+@font-face {
+    font-family: 'darthVader';
+    src: url('fonts/cookie-regular-webfont.eot');
+    src: url('fonts/cookie-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/cookie-regular-webfont.woff2') format('woff2'),
+        url('fonts/cookie-regular-webfont.woff') format('woff'),
+        url('fonts/cookie-regular-webfont.ttf') format('truetype'),
+        url('fonts/cookie-regular-webfont.svg#cookieregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; /*sets the default font size to 18 pixels.*/
+    line-height: 1.6; /* the height of a line of text.*/
+    color: #333; /*text color to a dark gray*/
+    margin: 0;
+    padding: 20px;
+    background-color: #f7f7f7; /*sets the background color to a light gray */
+}
+
+h1 {
+    /* uses the 'darthVader' font defined earlier and falls back to a generic sans-serif font if it's not available. */
+    font-family: 'darthVader', sans-serif;
+    font-weight: bold; /* it makes text bold*/
+    font-size: 32px;
+    margin-bottom: 20px; /*add spacing at the bottom of h1 */
+    text-transform: uppercase; /* it changes the text to uppercase */
+    letter-spacing: 1px; /*adds 1 pixel of spacing between characters.*/
+    text-decoration: underline; /*adds an underline to the text.*/
+}
+
+h2 {
+    font-family: 'darthVader', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px; /*add spacing at the bottom of h1 */
+    text-align: center;
+    line-height: 1.2;
+}
+
+p:nth-last-of-type(1){
+    font-family: 'darthVader', sans-serif;;
+}
+
+p:nth-last-of-type(2){
+    font-family: 'Noto Sans', sans-serif;
+}
+
+p:nth-last-of-type(3){
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    margin-bottom: 15px; /*adds spacing at the bottom of paragraphs.*/
+    text-indent: 20px; /*indents the first line of each paragraph by 20 pixels.*/
+}
+
+img {
+    position: fixed; /*fixes the image position on the page. */
+    top: 0; /*positions the image at the top-right corner. */
+    right: 0; /*positions the image at the top-right corner. */
+    width: 150px;
+    height: auto; /* maintains the aspect ratio when adjusting the width */
+    margin: 20px; /*adds a margin of 20 pixels around the image.*/
+    vertical-align: middle; /* aligns the image vertically in the middle. */
+}
