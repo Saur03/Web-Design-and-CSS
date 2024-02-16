@@ -1,0 +1,141 @@
+/* Resets margins, paddings, and borders to zero for a wide range of HTML elements. 
+This helps in achieving a consistent starting point for styling across different browsers.*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Define a font named 'darthVader' using the @font-face rule.  */
+@font-face {
+    font-family: 'darthVader';
+    src: url('fonts/cookie-regular-webfont.eot');
+    src: url('fonts/cookie-regular-webfont.eot?#iefix') format('embedded-opentype'),
+        url('fonts/cookie-regular-webfont.woff2') format('woff2'),
+        url('fonts/cookie-regular-webfont.woff') format('woff'),
+        url('fonts/cookie-regular-webfont.ttf') format('truetype'),
+        url('fonts/cookie-regular-webfont.svg#cookieregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Lora", serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1;
+    font-size: 62.5%;
+}
+
+header{
+    font-family: "Ubuntu", sans-serif;
+    text-align: center;
+    width: 100%; /* Set the width to 100% */
+    padding-top: 40px; /* Keep the padding-top as per your preference */
+    padding-bottom: 40px;
+    background:
+    linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
+    background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+    background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+    height: 12em;
+    color:white;
+}
+
+h1 {
+    font-size: 4.8em;
+    font-family: luckiestGuy, sans-serif;
+}
+
+/* Body Information */
+
+main article {
+    font-family: "Oswald", sans-serif;
+    background-color: rgb(240,240, 240);
+    padding:0 10px 10px;
+    margin: 10px 0px;
+    border-radius: 5px;
+    font-size: 1.6em;
+}
+
+
+main > h2{ 
+    text-align: center;
+    font-size: 2.4em;
+    line-height: 2.8em;
+    font-style: italic;
+    margin: 0.5em 0px;
+    background-color: rgb(218, 201, 123);
+}
+
+p{
+    font-size: 1em;
+    letter-spacing: 0.05em;
+}
+
+
+
+/* Footer Information */
+footer{
+    font-family: "Ubuntu", sans-serif;
+    width: 100%; /* Set the width to 100% */
+    padding: 20px; 
+    background-color: rgb(47, 46, 46);
+    color: white;
+    text-align: center;
+}
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main > h2 {
+    width: 100%;
+}
+main article{
+    font-family: "Dancing Script", cursive;
+    width: 30%;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    flex-grow: 2;
+}
+
