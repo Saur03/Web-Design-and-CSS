@@ -1,0 +1,89 @@
+/* Resets margins, paddings, and borders to zero for a wide range of HTML elements. 
+This helps in achieving a consistent starting point for styling across different browsers.*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+    font-family: "Playfair Display", "Kanit";
+    src: url(fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+    src: url(fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+
+body {
+    font-family: "Playfair Display", serif;
+    margin: 0;
+}
+
+h2 {
+    font-family: "Kanit", sans-serif;
+}
+
+.top-nav {
+    background-color: black;
+}
+
+.top-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-nav li {
+    float: left;
+    position: relative;
+}
+
+.top-nav a {
+    display: block;
+    color: rgb(100, 172, 245);
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.top-nav a:hover {
+    background-color: greenyellow;
+}
+
+.top-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    width: 300px;
+}
+
+.top-nav li:hover > ul {
+    display: block;
+}
+
+.top-nav ul ul li {
+    float: none;
+    width: 100%;
+}
+
+/* Adjust styles for third-level drop-down */
+.top-nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+.top-nav ul ul ul li {
+    float: none;
+}
+
