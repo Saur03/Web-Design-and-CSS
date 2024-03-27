@@ -1,0 +1,173 @@
+/*CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+    font-family: "Dancing Script", cursive;
+    src: url(fonts/DancingScript.ttf);
+}
+
+/* Clean CSS code */
+body {
+    font-family: "Dancing Script", cursive;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+figure {
+    width: calc(50% - 20px); /* Two columns, minus margins */
+    margin: 10px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease; /* CSS transition */
+}
+
+figcaption {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+figure:hover figcaption {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    clear: both;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+p {
+    text-align: center;
+    background-color: aliceblue;
+    padding: 15px 0;
+    font-family: sans-serif;
+}
+
+footer::before, footer::after {
+    width: 40%;
+    height: 10px;
+    content: '';
+    box-shadow: 0 20px 12px rgba(0,0,0,0.3);
+    position: absolute;
+    bottom: 20px;
+    z-index: -1;
+}
+
+footer::before {
+    left: 10px;
+    transform: skewX(-5deg) rotate(-5deg);
+}
+
+footer::after {
+    right: 10px;
+    transform: skewX(5deg) rotate(5deg);
+}
+
+/* Multi-column Layout and Responsive Design */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Switch to single column */
+    }
+    
+    figure {
+        width: calc(100% - 20px); /* Full width for single column, minus margins */
+    }
+}
+
+/* Tooltip */
+figcaption::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+figcaption:hover::after {
+    opacity: 1;
+}
+
+/* CSS Filter */
+li {
+    filter: sepia(0.8);
+}
+
+li:nth-child(1) img {
+    transform: translate(-10px, 20px) rotate(10deg);
+}
+
+li:nth-child(2) img {
+    transform: translate(-40px, 5px) rotate(10deg);
+}
+
+li:nth-child(3) img {
+    transform: translate(-40px, 5px) rotate(-13deg);
+}
+
+li:nth-child(4) img {
+    transform: translate(-20px, 20px) rotate(5deg);
+}
+
+li:nth-child(5) img {
+    transform: translate(-30px, 50px) rotate(-10deg);
+}
+
+li:nth-child(6) img {
+    transform: translate(-40px) rotate(5deg);
+}
+
+li:hover:nth-of-type(odd) img {
+    filter: sepia(0);
+    transform: scale(1.5) rotate(-10deg);
+}
+
+li:hover:nth-of-type(even) img {
+    filter: sepia(0);
+    transform: scale(1.5) rotate(0deg);
+}
