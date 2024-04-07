@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Submitted</title>
+
+</head>
+<body>
+<header>
+    <h1>Contact Form Submitted</h1>
+</header>
+
+<main>
+    <div>
+      <h2>Thank you for your message!</h2>
+      <p>Here are the details you provided:</p>
+      <p>Name: <span id="display-name"></span></p>
+      <p>Email: <span id="display-email"></span></p>
+      <p>Message: <span id="display-message"></span></p>
+    </div>
+</main>
+
+<footer>
+    <address>Saurabh Chawla &#8226; 4060 Churchill Dr &#8226; Windsor, Ontario</address>
+</footer>
+
+  <script>
+    // Retrieve the form data from the URL parameters
+    let urlParams = new URLSearchParams(window.location.search);
+    let name = urlParams.get('name');
+    let email = urlParams.get('email');
+    let message = urlParams.get('message');
+
+    // Display the form data on the page
+    document.getElementById('display-name').textContent = name;
+    document.getElementById('display-email').textContent = email;
+    document.getElementById('display-message').textContent = message;
+  </script>
+</body>
+</html>

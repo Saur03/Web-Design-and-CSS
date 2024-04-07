@@ -1,0 +1,119 @@
+/* CSS Resets */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Lora", serif;
+    src: url(fonts/Lora.ttf);
+
+    font-family: "Fira Sans", sans-serif;
+    src: url(fonts/FiraSans.ttf);
+    
+}
+
+body {
+    font-family: "Lora", serif;    
+    background: linear-gradient(135deg, #000, #fff); /* Gradient background (black to white) */
+    color: white; /* Set text color to white */
+}
+
+h1 {  
+    font-family: "Fira Sans", sans-serif;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+h2 {
+    font-family: "Fira Sans", sans-serif;
+
+}
+
+p{
+    margin-bottom: 20px;
+    white-space: nowrap; /* Prevent text from wrapping because the new delhi word is coming in next line, i want it in same line.*/
+}
+
+/* Style for the horizontal navigation bar */
+nav {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+
+footer {
+    background-color: #888;
+    color: black; 
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer address {
+    color: white; 
+}
+
+
+article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space between sections */
+}
+
+article > h2 {
+    width: 100%; /* Full width for each section title */
+    margin-bottom: 20px; /* Add spacing after each h2 */
+}
+
+article > ul {
+    flex: 1 1 45%; /* Set flex basis to 45% */
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    padding: 10px;
+    border-radius: 5px;
+    color: white; /* Set text color to white */
+    list-style-position: inside; /* Place list items inside the box */
+}
+
+/* Additional CSS to style the list items */
+article > ul li {
+    background-color: #333; /* Dark background color for list items */
+    padding: 5px 10px; /* Add padding to list items */
+    margin: 5px 0; /* Add margin to list items */
+    border-radius: 3px; /* Add border radius to list items */
+}
